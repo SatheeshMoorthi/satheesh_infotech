@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    /*===== Colors =====*/
+    --hue-color:242;
+
+    /* HSL Color Mode */
+    --skin-color: hsl(345, 100%, 50%);
+    --title-color: hsl(var(--hue-color), 8%, 95%);
+    --text-color: hsl(var(--hue-color), 8%, 85%);
+    --text-color2: hsl(var(--hue-color), 8%, 85%);
+    --body-color: hsl(var(--hue-color), 19%, 5%);
+    --box-color: hsl(var(--hue-color), 14%, 10%);
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 38%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 26%);
+
+    /*===== Font and Typography =====*/
+    --body-font: 'Poppins', sans-serif;
+
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+    --biggest-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+
+    /*===== Font Weight =====*/
+    --font-medium: 500;
+    --font-bold: 600;
+
+    /*===== Margenes Bottom =====*/
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /*===== Z Index =====*/
+    --z-fixed: 10;
+    --z-modal: 100;
+}
+
+/* Responsive Typography */
+@media screen and (max-width: 1024px) {
+    :root {
+        --biggest-font-size: 2rem;
+        --h1-font-size: 1.5rem;
+        --h2-font-size: 1.25rem;
+        --h3-font-size: 1.125rem;
+        --normal-font-size: .938rem;
+        --small-font-size: .813rem;
+        --smaller-font-size: .75rem;
+    }
+}
+
+/*=============== BASE ===============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body,
+button,
+input {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+    transition: background 0.2s linear;
+}
+
+h1, h2, h3 {
+    color: var(--title-color);
+    font-weight: var(--font-bold);
+}
+
+/*===== Auto Typer =====*/
+
+.nav__logo {
+    position: absolute;
+    top: 1.8rem;
+    right: initial;
+    left: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--skin-color);
+    text-align: center;
+    margin: auto;
+}
+ .nav__logo-text {
+    font-size: 1.125rem;
+    color: var(--title-color);
+    font-weight: var(--font-bold);
+    line-height: 40px;
+ }
+
+.auto {
+    position: relative;
+    text-align: center;
+    top: 20rem;
+    font-size: 50px;
+    background-color: var(--box-color);
+    padding: 1rem 2.25rem;
+    border-radius:1rem 3rem 1rem 3rem;
+}
+
+.auto span {
+    color: var(--skin-color);
+}
+
+.uil-cog {
+    color: var(--title-color);
+    position: absolute;
+    text-align: center;
+    top: 3rem;
+    font-size: 150px;
+    padding: 1rem 2.25rem;
+    left: 43%;
+    transition: 3s;
+}
+
+.uil-cog:hover {
+    position: absolute;
+    cursor: pointer;
+    transform: rotateZ(360deg);
+    color: var(--skin-color);
+}
+
+.home__social-links {
+    position: absolute;
+    display: inline-flex;
+    column-gap: 2.5rem;
+    font-size: 1.5rem;
+    left: 33%;
+    top: 30rem;
+}
+
+.home__social-follows::after {
+    content: '';
+    position: relative;
+    width: 1rem;
+    height: 2px;
+    background-color: var(--skin-color);
+    left: 46%;
+    top: 50%;
+}
+
+.home__social-link {
+    font-size: 1.5rem;
+    color: var(--text-color2);
+    column-gap: 1.5rem;
+    transition: .3s;
+}
+
+.home__social-link:hover {
+    font-size: 1.6rem;
+    transform: translateY(.25rem);
+    color: var(--skin-color);
+}
+
+.footer__copy {
+    position: absolute;
+    font-size: var(--smaller-font-size);
+    text-align: center;
+    margin-top: 4.5rem;
+    top: 32rem;
+    left: 42%;
+}

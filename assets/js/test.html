@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	  <link rel="stylesheet" href="assets/css/style.css">
+	<script type="text/javascript">
+
+	function fun() {
+
+
+		//alert("jjj")
+		var t1;
+		t1=document.getElementById("t1").value;
+
+		if(t1=="w") {
+  			document.getElementById("color").innerHTML="Green";
+  			document.getElementById("t1").value="r";
+		}
+
+
+
+		if(t1=="r") {
+		  			document.getElementById("color").innerHTML="red";
+		  			document.getElementById("t1").value="w";
+		}
+
+
+</script>
+</head>
+<body>
+	 <button  id="color" onclick="fun()">click</button>
+                
+                <input type="text" id=t1  value="w" hidden="">
+
+
+</body>
+</html>
